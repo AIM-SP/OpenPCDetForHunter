@@ -13,6 +13,7 @@ from .pandaset.pandaset_dataset import PandasetDataset
 from .lyft.lyft_dataset import LyftDataset
 from .once.once_dataset import ONCEDataset
 from .argo2.argo2_dataset import Argo2Dataset
+from .coda.coda_dataset import CODataset
 from .custom.custom_dataset import CustomDataset
 
 __all__ = {
@@ -24,6 +25,7 @@ __all__ = {
     'LyftDataset': LyftDataset,
     'ONCEDataset': ONCEDataset,
     'CustomDataset': CustomDataset,
+    'CODataset': CODataset,
     'Argo2Dataset': Argo2Dataset
 }
 

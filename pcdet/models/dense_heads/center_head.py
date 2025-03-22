@@ -276,6 +276,7 @@ class CenterHead(nn.Module):
                     tb_dict['iou_loss_head_%d' % idx] = iou_loss.item()
 
                 if self.model_cfg.get('IOU_REG_LOSS', False):
+                    batch_box_preds_for_iou = batch_box_preds.permute(0, 3, 1, 2)
                     iou_reg_loss = loss_utils.calculate_iou_reg_loss_centerhead(
                         batch_box_preds=batch_box_preds_for_iou,
                         mask=target_dicts['masks'][idx],
